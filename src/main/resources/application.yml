@@ -1,0 +1,9 @@
+server:
+  port: 9000
+  session:
+    timeout: 30
+
+github: Github
+name: WeRockStar ${github}
+
+
