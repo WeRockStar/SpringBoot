@@ -1,4 +1,5 @@
 
  ```
  ./gradlew bootRun
+ ./gradlew bootRepackage
  ```
