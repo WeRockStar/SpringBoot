@@ -1,4 +1,4 @@
-package com.werockstar;
+package com.werockstar.runner;
 
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
