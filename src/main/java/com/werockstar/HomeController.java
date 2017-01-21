@@ -6,10 +6,14 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.ApplicationArguments;
 import org.springframework.context.annotation.Import;
+import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
+
+import java.util.List;
+import java.util.Map;
 
 @RestController
 @Controller
@@ -24,6 +28,16 @@ public class HomeController {
 
     @Autowired
     ApplicationArguments args;
+
+
+    @Autowired
+    JdbcTemplate template;
+
+    @RequestMapping("/stocks")
+    public List<Map<String, Object>> stocks() {
+        return template.queryForList("SELECT *FROM stock");
+    }
+
 
     @RequestMapping("/")
     public String index() {
