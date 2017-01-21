@@ -7,3 +7,4 @@ github: Github
 name: WeRockStar ${github}
 
 
+random: {random.int(10,20)}
