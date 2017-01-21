@@ -1,6 +1,7 @@
 package com.werockstar;
 
 import com.werockstar.config.DemoConfig;
+import com.werockstar.config.RandomDemo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
@@ -19,6 +20,9 @@ public class HomeController {
     @Autowired
     String message;
 
+    @Autowired
+    RandomDemo demo;
+
     @RequestMapping("/")
     @ResponseBody
     public String index() {
@@ -29,4 +33,10 @@ public class HomeController {
     public String message() {
         return message;
     }
+
+    @RequestMapping("/random")
+    public String random() {
+        return "Random int : " + demo.getMessage();
+    }
+
 }
