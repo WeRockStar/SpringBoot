@@ -18,7 +18,7 @@ public class Application extends WebSecurityConfigurerAdapter {
     protected void configure(HttpSecurity http) throws Exception {
         // http.authorizeRequests().anyRequest().authenticated().and().httpBasic();
         http.csrf().disable();
-        http.authorizeRequests().anyRequest().authenticated().and().formLogin();
+        // http.authorizeRequests().anyRequest().authenticated().and().formLogin();
     }
 
 }
