@@ -18,20 +18,12 @@ public class HomeController {
     String name;
 
     @Autowired
-    String message;
-
-    @Autowired
     RandomDemo demo;
 
     @RequestMapping("/")
     @ResponseBody
     public String index() {
         return name;
-    }
-
-    @RequestMapping("/message")
-    public String message() {
-        return message;
     }
 
     @RequestMapping("/random")
