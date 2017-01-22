@@ -2,17 +2,19 @@ package com.werockstar.monitor;
 
 
 import org.springframework.boot.actuate.endpoint.Endpoint;
+import org.springframework.stereotype.Component;
 
+@Component
 public class CustomEndpoint implements Endpoint<String> {
 
     @Override
     public String getId() {
-        return null;
+        return "Custom";
     }
 
     @Override
     public boolean isEnabled() {
-        return false;
+        return true;
     }
 
     @Override
@@ -22,6 +24,6 @@ public class CustomEndpoint implements Endpoint<String> {
 
     @Override
     public String invoke() {
-        return null;
+        return "Successful Endpoint Test";
     }
 }
