@@ -42,13 +42,13 @@ public class HomeController {
     @RequestMapping("/")
     public String index() {
         // String value = args.getOptionNames().iterator().next();
-        return name;
+        return name + " Live";
     }
 
     @RequestMapping("/body")
     @ResponseBody
     public Sample sample() {
-        return new Sample("01", "WeRockStar");
+        return new Sample("01", "WeRockStar Git");
     }
 
     @RequestMapping("/viewresolver")
