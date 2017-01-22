@@ -29,7 +29,6 @@ public class HomeController {
     @Autowired
     ApplicationArguments args;
 
-
     @Autowired
     JdbcTemplate template;
 
@@ -38,6 +37,16 @@ public class HomeController {
         return template.queryForList("SELECT *FROM stock");
     }
 
+    /*
+        /mappings, See all mapping
+        /trace, See all http request
+        /beans, See all register IoC
+     */
+
+    @RequestMapping("/execute")
+    public String execute() {
+        return "execute";
+    }
 
     @RequestMapping("/")
     public String index() {
