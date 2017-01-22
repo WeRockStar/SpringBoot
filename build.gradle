@@ -34,6 +34,7 @@ dependencies {
 	compile group: 'com.h2database', name: 'h2', version: '1.4.193'
 	compile group: 'mysql', name: 'mysql-connector-java', version: '6.0.5'
 	compile group: 'org.springframework.security.oauth', name: 'spring-security-oauth2', version: '2.0.12.RELEASE'
+	compile group: 'org.springframework.hateoas', name: 'spring-hateoas', version: '0.23.0.RELEASE'
 	testCompile('org.springframework.boot:spring-boot-starter-test')
 	compile("org.springframework.boot:spring-boot-devtools")
 	compile group: 'org.springframework.boot', name: 'spring-boot-starter-actuator', version: '1.4.3.RELEASE'
