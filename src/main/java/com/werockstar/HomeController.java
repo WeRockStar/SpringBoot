@@ -41,6 +41,8 @@ public class HomeController {
         /mappings, See all mapping
         /trace, See all http request
         /beans, See all register IoC
+        /dump, See all thread dump
+        /autoconfig, See all auto config
      */
 
     @RequestMapping("/execute")
